@@ -15,6 +15,15 @@
 */
 
 .page {
+  font-family: var(--main-font-family);
+  font-variation-settings: 'wdth' var(--main-wdth);
+  background-color: var(--bckg-color);
+  color: var(--text-color);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: var(--bckg-image);
+  background-size: cover;
+  background-attachment: fixed;
+
+
 }
