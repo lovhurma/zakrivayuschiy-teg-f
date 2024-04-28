@@ -24,6 +24,73 @@
   background-image: var(--bckg-image);
   background-size: cover;
   background-attachment: fixed;
-
-
 }
+
+/* Секция header */
+
+.header {
+  font-family: var(--accent-font-family);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--header-bckg);
+  margin: 100px auto 100px;
+  inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  padding-block-start: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem);
+  text-transform: uppercase;
+  line-height: 1;
+  border: 2px solid black;
+}
+
+.header__tittle {
+  font-size: var(--header-fsz);
+  margin-block-end: 20px;
+}
+
+.header__subtittle {
+  font-size: var(--text-fsz);
+  margin-block-end: 25px;
+}
+/* Секция navigation */
+
+.theme-menu {
+  margin-block-end: 25px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  padding: 0;
+  cursor: pointer;
+}
+
+.theme-menu__button:disabled {
+  position: relative;
+  opacity: 0.6;
+  cursor: default;
+  pointer-events: none;
+}
+
+.theme-menu__button:disabled::before {
+  position: absolute;
+  content: '▶';
+  inline-size: 14px;
+  block-size: 14px;
+  margin-inline-start: -16px;
+}
+
+/* Секция main */
+
+
+
