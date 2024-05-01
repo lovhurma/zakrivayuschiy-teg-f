@@ -114,6 +114,31 @@
 
 .card__image {
   border-block-end: 2px solid var(--border-color);
+  position: relative;
+}
+
+.card__label {
+  position: absolute;
+  inset-block-start: 25px;
+  inset-inline-end: clamp(0.8125rem, -0.0529rem + 3.6923vw, 1.5625rem);
+  font-family: var(--accent-font-family);
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text-color);
+  mix-blend-mode: hard-light;
+}
+
+.label-shadow {
+  text-shadow: 0px 0px 1px var(--text-shadow);
+  opacity: 0.5;
+}
+
+@supports((text-stroke: 1px var(--text-shadow)) or (-webkit-text-stroke: 1px var(--text-shadow))) {
+  .label-shadow {
+    -webkit-text-stroke: 1px var(--text-shadow);
+    text-stroke: 1px var(--text-shadow);
+    text-shadow: none;
+  }
 }
 
 .card__image-car {
