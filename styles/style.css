@@ -213,18 +213,53 @@ border: none;
 .card__icon-button {
   padding: 0;
   block-size: 38px;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border: 2px solid var(--border-color);
 }
 
 .card__like-button {
+  position: relative;
   inline-size: 130px;
   block-size: 38px;
   border: 2px solid var(--border-color);
+  transition: box-shadow 0.3s ease;
 }
 
 .button__text {
   font-size: 14px;
   font-family: var(--accent-font-family);
 }
+
+.card__like-button:focus, .button__floopy:focus {
+  outline: none;
+  box-shadow: 2px 2px 0px var(--border-color);
+}
+
+.card__like-button::after {
+  position: absolute;
+  content: '';
+  background-color: var(--border-color);
+  scale: 0;
+  transition: scale 0.5s ease-in-out;
+  inset: 0;
+  transform-origin: left;
+} 
+
+.card__like-button:hover::after {
+  scale: 1;
+} 
+
+.button__text {
+}
+
+
 
 /* Секция footer */
 
@@ -244,6 +279,7 @@ border: none;
   color: var(--text-color);
   border: 2px solid var(--border-color);
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  transition: box-shadow 0.3s ease;
 }
 
 .button__floopy-icon {
