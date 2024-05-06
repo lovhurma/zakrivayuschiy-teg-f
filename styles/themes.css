@@ -15,6 +15,7 @@
   --header-bckg: #F5F5F5;  
   --border-color: black;
   --text-shadow: #FFFFFF;
+  --button__text: #F5F5F5;
 }
 
 :root.theme-dark{
@@ -28,6 +29,7 @@
   --header-bckg: #000000;  
   --border-color: #00CC14;
   --text-shadow:  #000000;
+  --button__text: #00CC14;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,5 +44,6 @@
     --header-bckg: #000000;  
     --border-color: #00CC14;
     --text-shadow:  #000000;
+    --button__text: #00CC14;
   }
 }
