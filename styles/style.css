@@ -45,6 +45,12 @@
 .header__tittle {
   font-size: var(--header-fsz);
   margin-block-end: 20px;
+  text-decoration: none;
+  pointer-events: none;
+}
+
+.header__tittle:focus {
+  outline: none;
 }
 
 .header__subtittle {
@@ -147,7 +153,7 @@
   font-size: 18px;
   border-block-end: 2px solid var(--border-color);
   padding: 4px 10px 5px;
-  font-weight: var(--accent-wdth);
+  font-variation-settings: "wght" var(--accent-wdth);
 }
 
 .card__image {
@@ -318,7 +324,7 @@ cursor: pointer;
 
 /* Popup */
 
-.popup {
+.popup[open] {
   inline-size: clamp(21.3125rem, 21.0484rem + 1.1268vw, 22.0625rem);
   background-color: var(--bckg-color);
   color: var(--text-color);
@@ -343,14 +349,37 @@ cursor: pointer;
   inline-size: 39px;
 }
 
+.popup__button-text {
+  text-transform: uppercase;
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 1;
+  color: var(--button__text);
+}
+
 .popup[open]::backdrop {
   background-color: rgba(0 0 0/ 0.8);
 }
 
 .dialog__button-floopy {
+  position: relative;
+  overflow: hidden;
   border: 2px solid var(--border-color);
   inline-size: 293px;
   padding: 12.5px 132.5px;
+}
+
+.dialog__button-floopy::after {
+  position: absolute;
+  content: '';
+  inset: 0;
+  background-color: var(--border-color);
+  translate: -100%;
+  transition: translate 0.5s ease-in-out;
+}
+
+.dialog__button-floopy:hover::after {
+  translate: 0;
 }
 
 .sepia-minimum {
@@ -393,10 +422,11 @@ cursor: pointer;
   }
 
   .button__floopy {
-    block-size: 80px;
+    block-size: 82px;
     gap: 8px;
     flex-direction: column;
     padding-block-start: 15px;
+    padding-inline-start: 6px;
   }
 
   .button__floopy-icon {
@@ -404,7 +434,7 @@ cursor: pointer;
   } 
   
   .popup {
-    padding: 30px 42px;
+    padding: 30px 40px;
   }
 
   .dialog__button-floopy {
