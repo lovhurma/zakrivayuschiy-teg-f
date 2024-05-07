@@ -18,7 +18,7 @@
   --button__text: #F5F5F5;
 }
 
-:root.theme-dark{
+:root.theme-dark {
   --main-wdth: 465;
   --accent-wdth: 785;
   --bckg-color: #000000;

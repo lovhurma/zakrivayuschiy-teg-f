@@ -247,6 +247,10 @@ cursor: pointer;
 .button__text {
   font-size: 14px;
   font-family: var(--accent-font-family);
+  position: relative;
+  mix-blend-mode: difference;
+  z-index: 1;
+  color: var(--button__text);
 }
 
 .card__like-button:focus, .button__floopy:focus {
@@ -270,13 +274,6 @@ cursor: pointer;
 .card__like-button:hover::after {
   translate: 0;
 } 
-
-.button__text {
-  position: relative;
-  mix-blend-mode: difference;
-  z-index: 1;
-  color: var(--button__text);
-}
 
 /* Секция footer */
 

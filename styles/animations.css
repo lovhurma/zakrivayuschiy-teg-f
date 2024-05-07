@@ -54,7 +54,7 @@
 
 /* click animatiom */
 
-.like-icon.is-liked .core{
+.like-icon.is-liked .core {
   transition: fill 0.3s linear;
   fill: #FF0000;
 }
