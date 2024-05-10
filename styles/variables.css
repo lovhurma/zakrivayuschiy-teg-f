@@ -1,7 +1,7 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
   --main-font-family: 'Inter-Variable', sans-serif;
-  --accent-font-family: 'PressStart2P-Regular', sans-serif;
+  --accent-font-family: 'PressStart2P-Regular', fantasy;
   --main-wdth: 400;
   --accent-wdth: 700;
   --bckg-color: #F5F5F5;
@@ -15,4 +15,5 @@
   --border-color: black;
   --sparks-color: #FF0000;
   --button__text: #F5F5F5;
+  --text-shadow: #FFFFFF;
 }

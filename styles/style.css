@@ -16,7 +16,7 @@
 
 .page {
   font-family: var(--main-font-family);
-  font-variation-settings: 'wdth' var(--main-wdth);
+  font-variation-settings: 'wdth'var(--main-wdth);
   background-color: var(--bckg-color);
   color: var(--text-color);
   min-inline-size: 320px;
@@ -57,6 +57,7 @@
   font-size: var(--text-fsz);
   margin-block-end: 25px;
 }
+
 /* Секция navigation */
 
 .theme-menu {
@@ -113,7 +114,7 @@
   background-color: currentColor;
   transition: scale 0.3s ease;
   scale: 0;
-} 
+}
 
 .theme-menu__button:focus {
   outline: none;
@@ -153,7 +154,7 @@
   font-size: 18px;
   border-block-end: 2px solid var(--border-color);
   padding: 4px 10px 5px;
-  font-variation-settings: "wght" var(--accent-wdth);
+  font-variation-settings: "wght"var(--accent-wdth);
 }
 
 .card__image {
@@ -212,9 +213,9 @@
 }
 
 .card__icon-button, .card__like-button, .button__floopy, .dialog__button-floopy {
-background-color: transparent;
-border: none;
-cursor: pointer;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 .card__icon-button {
@@ -253,11 +254,11 @@ cursor: pointer;
   color: var(--button__text);
 }
 
-.card__like-button:focus, .button__floopy:focus {
+.card__like-button:focus, .button__floopy:focus, .dialog__button-floopy:focus {
   outline: none;
 }
 
-.card__like-button:focus-visible, .button__floopy:focus-visible {
+.card__like-button:focus-visible, .button__floopy:focus-visible, .dialog__button-floopy:focus-visible {
   box-shadow: 2px 2px 0px var(--border-color);
 }
 
@@ -269,11 +270,11 @@ cursor: pointer;
   transition: translate 0.5s ease-in-out;
   inset: 0;
   transform-origin: left;
-} 
+}
 
 .card__like-button:hover::after {
   translate: 0;
-} 
+}
 
 /* Секция footer */
 
@@ -317,7 +318,7 @@ cursor: pointer;
   mix-blend-mode: difference;
   color: var(--button__text);
   z-index: 1;
-} 
+}
 
 /* Popup */
 
@@ -332,6 +333,10 @@ cursor: pointer;
   line-height: 150%;
   text-transform: uppercase;
   padding: 30px;
+}
+
+.popup[open]:focus {
+  outline: none;
 }
 
 .popup__container {
@@ -407,15 +412,19 @@ cursor: pointer;
   filter: brightness(2) saturate(60%) hue-rotate(60deg) opacity(0.5) sepia(0.3);
 }
 
-@media (width <= 375px) {
+@media (width <=375px) {
 
   .main {
     gap: 49px;
-}
+  }
 
   .footer {
     margin-block-start: 52px;
     margin-block-end: 100px;
+  }
+
+  .popup[open] {
+    padding: 30px 40px;
   }
 
   .button__floopy {
@@ -428,8 +437,8 @@ cursor: pointer;
 
   .button__floopy-icon {
     inline-size: 28px;
-  } 
-  
+  }
+
   .popup {
     padding: 30px 40px;
   }
